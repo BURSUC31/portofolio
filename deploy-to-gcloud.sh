@@ -76,7 +76,7 @@ echo -e "${YELLOW}🔓 Making bucket publicly accessible...${NC}"
 # Make bucket publicly accessible
 gcloud storage buckets add-iam-policy-binding "gs://${BUCKET_NAME}" \
     --member=allUsers \
-    --role=roles/storage.objectViewer
+    --role=roles/storage.legacyBucketReader
 
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo -e "${BLUE}🌍 Your website is live at:${NC}"

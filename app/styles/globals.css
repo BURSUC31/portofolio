@@ -18,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a1b23;
+    --foreground: #e4e6ea;
   }
 }
 
@@ -66,8 +66,8 @@ body {
 }
 
 html.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #1a1b23;
+  --foreground: #e4e6ea;
 }
 
 html.pink {

@@ -21,9 +21,7 @@ export const PinkThemeButton: React.FC = () => {
   };
 
   if (!mounted) {
-    return (
-      <div className="h-[14px] w-[14px] bg-pink-400 rounded-full" />
-    );
+    return <div className="h-[14px] w-[14px] bg-pink-400 rounded-full" />;
   }
 
   return (
@@ -34,10 +32,10 @@ export const PinkThemeButton: React.FC = () => {
       className="flex items-center justify-center transition-all duration-300 hover:opacity-90 cursor-pointer hover:scale-110"
       title={theme === 'pink' ? 'Exit Pink Theme' : 'Pink Theme'}
     >
-      <div 
+      <div
         className={`h-[14px] w-[14px] rounded-full transition-all duration-300 ${
-          theme === 'pink' 
-            ? 'bg-gradient-to-r from-pink-400 to-pink-600 ring-2 ring-pink-300' 
+          theme === 'pink'
+            ? 'bg-gradient-to-r from-pink-400 to-pink-600 ring-2 ring-pink-300'
             : 'bg-gradient-to-r from-pink-300 to-pink-500 hover:from-pink-400 hover:to-pink-600'
         }`}
       />

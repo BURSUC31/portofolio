@@ -53,8 +53,11 @@ export const ThemeSwitch: React.FC = () => {
     >
       <FaCircleHalfStroke
         className={`h-[14px] w-[14px] ${
-          theme === 'dark' ? 'text-[#D4D4D4]' : 
-          theme === 'pink' ? 'text-[#7c2d12]' : 'text-[#1c1c1c]'
+          theme === 'dark'
+            ? 'text-[#D4D4D4]'
+            : theme === 'pink'
+            ? 'text-[#7c2d12]'
+            : 'text-[#1c1c1c]'
         }`}
       />
     </button>

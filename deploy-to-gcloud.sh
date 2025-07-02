@@ -55,7 +55,11 @@ cd out
 
 # Upload files with correct MIME types and preserve directory structure
 echo -e "${BLUE}📁 Uploading all files and directories...${NC}"
-gcloud storage rsync -r . "gs://${BUCKET_NAME}/" -h "Cache-Control:no-cache, max-age=0"
+gcloud storage cp -r . "gs://${BUCKET_NAME}/"
+
+# Set cache control headers to prevent caching
+echo -e "${YELLOW}🔧 Setting cache-control headers...${NC}"
+gcloud storage objects update "gs://${BUCKET_NAME}/**" --cache-control="no-cache, max-age=0"
 
 # Go back to project root
 cd ..

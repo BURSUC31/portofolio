@@ -46,9 +46,16 @@ echo -e "${GREEN}✅ Build completed successfully${NC}"
 
 echo -e "${YELLOW}☁️  Uploading to Google Cloud Storage bucket: gs://${BUCKET_NAME}${NC}"
 
-# Change to out directory and upload all files
+# Optional: Clear existing files to avoid conflicts (uncomment if needed)
+echo -e "${YELLOW}🗑️  Clearing existing files...${NC}"
+gcloud storage rm -r "gs://${BUCKET_NAME}/**" 2>/dev/null || true
+
+# Change to out directory and upload all files recursively
 cd out
-gcloud storage cp -r * "gs://${BUCKET_NAME}/"
+
+# Upload files with correct MIME types and preserve directory structure
+echo -e "${BLUE}📁 Uploading all files and directories...${NC}"
+gcloud storage rsync -r . "gs://${BUCKET_NAME}/" -h "Cache-Control:no-cache, max-age=0"
 
 # Go back to project root
 cd ..
@@ -70,8 +77,10 @@ gcloud storage buckets add-iam-policy-binding "gs://${BUCKET_NAME}" \
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo -e "${BLUE}🌍 Your website is live at:${NC}"
 echo -e "${GREEN}https://storage.googleapis.com/${BUCKET_NAME}/index.html${NC}"
+echo -e "${BLUE}🌍 Alternative URL (may work better):${NC}"
+echo -e "${GREEN}http://${BUCKET_NAME}.storage.googleapis.com${NC}"
 
-echo -e "${YELLOW}📝 Optional: Set up custom domain for a cleaner URL${NC}"
+echo -e "${YELLOW}📝 Note: If you see asset loading errors, try the alternative URL above${NC}"
 
 # Optional: Commit and push changes to GitHub
 read -p "Do you want to commit and push changes to GitHub? (y/n): " -n 1 -r

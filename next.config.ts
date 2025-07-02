@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  assetPrefix: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -14,7 +15,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  /* config options here */
   reactStrictMode: true,
 };
 

@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'storage.googleapis.com',
         port: '',
-        pathname: isProd ? '/dimitrie-portfolio-website-eu/**' : '/public',
+        pathname: isProd ? '.' : '/public',
       },
     ],
   },

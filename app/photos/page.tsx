@@ -7,35 +7,35 @@ export const metadata = {
 
 const photosCloud = [
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo1.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo2.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo3.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo4.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo4.jpg',
     alt: 'photo4',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo5.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo5.jpg',
     alt: 'photo5',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo6.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo6.jpg',
     alt: 'photo6',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo7.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo7.jpg',
     alt: 'photo7',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photos/photo8.jpg',
+    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo8.jpg',
     alt: 'photo8',
   },
 ];

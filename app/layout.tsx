@@ -17,8 +17,11 @@ export const metadata: Metadata = {
 const isProd = process.env.NODE_ENV === 'production';
 
 const getProdHref = (path: string) => {
-  if (!isProd || path === '/') {
+  if (!isProd) {
     return path;
+  }
+  if (path === '/') {
+    return '/index.html';
   }
   return `${path}/index.html`;
 };

@@ -14,6 +14,15 @@ export const metadata: Metadata = {
     'A passionate Software Engineer specialized in Web Development...',
 };
 
+const isProd = process.env.NODE_ENV === 'production';
+
+const getProdHref = (path: string) => {
+  if (!isProd || path === '/') {
+    return path;
+  }
+  return `${path}/index.html`;
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,25 +43,28 @@ export default function RootLayout({
             <nav className="lg:mb-16 mb-12 py-5">
               <div className="flex flex-col md:flex-row md:items-center justify-between">
                 <div className="flex items-center">
-                  <Link href="/" className="text-3xl font-semibold">
+                  <Link
+                    href={getProdHref('/')}
+                    className="text-3xl font-semibold"
+                  >
                     Dimitrie Tomulesei
                   </Link>
                 </div>
                 <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
                   <Link
-                    href="/cv"
+                    href={getProdHref('/cv')}
                     className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-blue-400 ring-2 ring-blue-300 dark:ring-blue-500"
                   >
                     📄 CV
                   </Link>
                   <Link
-                    href="/projects"
+                    href={getProdHref('/projects')}
                     className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
                   >
                     Projects
                   </Link>
                   <Link
-                    href="/photos"
+                    href={getProdHref('/photos')}
                     className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative"
                   >
                     Photos

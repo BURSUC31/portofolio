@@ -17,7 +17,7 @@ export default function Home() {
             width={180}
             height={180}
             className="rounded-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900 dark:to-purple-900 p-2 shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:scale-110 border-4 border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 ring-2 ring-blue-100 dark:ring-blue-800 hover:ring-4 hover:ring-blue-200 dark:hover:ring-blue-600 aspect-square object-cover"
-            src="./profile.png"
+            src="/profile.png"
             priority
           />
         </a>

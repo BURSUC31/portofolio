@@ -42,6 +42,17 @@ if [ ! -d "out" ]; then
     exit 1
 fi
 
+echo -e "${YELLOW}🔧 Fixing asset paths for production...${NC}"
+# Fix profile photo path in the generated HTML
+if [ -f "out/index.html" ]; then
+    sed -i 's|src="/profile\.png"|src="https://tomuleseidimitrie.dev/profile.png"|g' out/index.html
+    echo -e "${GREEN}✅ Fixed profile photo path in index.html${NC}"
+fi
+
+# Fix any other relative paths that might cause issues
+find out -name "*.html" -type f -exec sed -i 's|src="/\([^"]*\.\(jpg\|jpeg\|png\|gif\|svg\|webp\)\)"|src="https://tomuleseidimitrie.dev/\1"|g' {} \;
+echo -e "${GREEN}✅ Fixed all image paths in HTML files${NC}"
+
 echo -e "${GREEN}✅ Build completed successfully${NC}"
 
 echo -e "${YELLOW}☁️  Uploading to Google Cloud Storage bucket: gs://${BUCKET_NAME}${NC}"

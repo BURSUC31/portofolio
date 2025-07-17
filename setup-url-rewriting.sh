@@ -32,12 +32,14 @@ pathMatchers:
 - name: clean-urls
   defaultService: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
   pathRules:
+  # Handle root path
   - paths:
     - /
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
         pathPrefixRewrite: /index.html
+  # Handle clean URLs for main pages
   - paths:
     - /cv
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
@@ -56,6 +58,26 @@ pathMatchers:
     routeAction:
       urlRewrite:
         pathPrefixRewrite: /projects/index.html
+  # Handle trailing slash versions - rewrite to same files
+  - paths:
+    - /cv/
+    service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
+    routeAction:
+      urlRewrite:
+        pathPrefixRewrite: /cv/index.html
+  - paths:
+    - /photos/
+    service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
+    routeAction:
+      urlRewrite:
+        pathPrefixRewrite: /photos/index.html
+  - paths:
+    - /projects/
+    service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
+    routeAction:
+      urlRewrite:
+        pathPrefixRewrite: /projects/index.html
+  # Default catch-all for other paths
   - paths:
     - /*
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME

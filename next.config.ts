@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  trailingSlash: true,
+  trailingSlash: false,
   basePath: undefined,
   assetPrefix: isProd ? 'https://tomuleseidimitrie.dev' : undefined,
   images: {

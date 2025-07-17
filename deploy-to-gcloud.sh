@@ -6,7 +6,7 @@
 set -e  # Exit on any error
 
 # Configuration
-BUCKET_NAME="dimitrie-portfolio-website-eu"
+BUCKET_NAME="tomuleseidimitrie.dev"
 PROJECT_ID="dimitrie-tomulesei"
 
 # Colors for output

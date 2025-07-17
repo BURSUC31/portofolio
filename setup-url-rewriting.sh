@@ -45,38 +45,38 @@ pathMatchers:
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /cv/index.html
+        pathPrefixRewrite: /cv.html
   - paths:
     - /photos
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /photos/index.html
+        pathPrefixRewrite: /photos.html
   - paths:
     - /projects
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /projects/index.html
+        pathPrefixRewrite: /projects.html
   # Handle trailing slash versions - rewrite to same files
   - paths:
     - /cv/
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /cv/index.html
+        pathPrefixRewrite: /cv.html
   - paths:
     - /photos/
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /photos/index.html
+        pathPrefixRewrite: /photos.html
   - paths:
     - /projects/
     service: projects/$PROJECT_ID/global/backendBuckets/$BACKEND_BUCKET_NAME
     routeAction:
       urlRewrite:
-        pathPrefixRewrite: /projects/index.html
+        pathPrefixRewrite: /projects.html
   # Default catch-all for other paths
   - paths:
     - /*

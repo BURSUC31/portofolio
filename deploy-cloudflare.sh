@@ -20,8 +20,18 @@ echo -e "${BLUE}🚀 Starting deployment for Cloudflare + Cloud Storage...${NC}"
 
 # Check if gcloud is installed
 if ! command -v gcloud &> /dev/null; then
-    echo -e "${RED}❌ Error: gcloud CLI is not installed${NC}"
-    exit 1
+    # Try to add gcloud to PATH from common installation locations
+    if [ -f "$HOME/google-cloud-sdk/bin/gcloud" ]; then
+        export PATH="$PATH:$HOME/google-cloud-sdk/bin"
+        echo -e "${YELLOW}✅ Added gcloud to PATH from home directory${NC}"
+    elif [ -f "/home/dimi/Documents/google-cloud-sdk/bin/gcloud" ]; then
+        export PATH="$PATH:/home/dimi/Documents/google-cloud-sdk/bin"
+        echo -e "${YELLOW}✅ Added gcloud to PATH from Documents directory${NC}"
+    else
+        echo -e "${RED}❌ Error: gcloud CLI is not installed${NC}"
+        echo -e "${YELLOW}💡 Install it with: curl https://sdk.cloud.google.com | bash${NC}"
+        exit 1
+    fi
 fi
 
 # Check if yarn is installed

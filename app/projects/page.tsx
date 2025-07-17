@@ -1,10 +1,5 @@
 const projects = [
   {
-    name: 'Anonimigram',
-    description: 'Anonymous social media platform',
-    href: 'https://anonimigram.com/',
-  },
-  {
     name: 'Comrade Buyer',
     description:
       'API for collective buying with Stripe integration and promotional deals',

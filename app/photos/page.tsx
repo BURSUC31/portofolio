@@ -7,89 +7,89 @@ export const metadata = {
 
 const photosCloud = [
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo1.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo2.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo3.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo4.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
     alt: 'photo4',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo5.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo5.jpg',
     alt: 'photo5',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo6.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo6.jpg',
     alt: 'photo6',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo7.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo7.jpg',
     alt: 'photo7',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo8.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo8.jpg',
     alt: 'photo8',
   },
 ];
 
 const photosLocal1 = [
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo1.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo2.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo3.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo4.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
     alt: 'photo4',
   },
 ];
 
 const photosLocal2 = [
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo1.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo2.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo3.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo4.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
     alt: 'photo4',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo5.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo5.jpg',
     alt: 'photo5',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo6.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo6.jpg',
     alt: 'photo6',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo7.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo7.jpg',
     alt: 'photo7',
   },
   {
-    src: 'https://storage.googleapis.com/dimitrie-portfolio-website-eu/photo8.jpg',
+    src: 'https://tomuleseidimitrie.dev/photo8.jpg',
     alt: 'photo8',
   },
 ];

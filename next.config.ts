@@ -12,9 +12,21 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'storage.googleapis.com',
+        hostname: 'tomuleseidimitrie.dev',
         port: '',
-        pathname: isProd ? '/**' : '/**',
+        pathname: '/photo*.jpg',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tomuleseidimitrie.dev',
+        port: '',
+        pathname: '/profile.png',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tomuleseidimitrie.dev',
+        port: '',
+        pathname: '/_next/**',
       },
     ],
   },

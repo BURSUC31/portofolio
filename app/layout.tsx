@@ -14,16 +14,9 @@ export const metadata: Metadata = {
     'A passionate Software Engineer specialized in Web Development...',
 };
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const getProdHref = (path: string) => {
-  if (!isProd) {
-    return path;
-  }
-  if (path === '/') {
-    return '/index.html';
-  }
-  return `${path}/index.html`;
+  // Always return clean URLs - let the load balancer handle routing
+  return path;
 };
 
 export default function RootLayout({

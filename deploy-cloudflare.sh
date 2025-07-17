@@ -20,15 +20,8 @@ echo -e "${BLUE}🚀 Starting deployment for Cloudflare + Cloud Storage...${NC}"
 
 # Check if gcloud is installed
 if ! command -v gcloud &> /dev/null; then
-    # Try to add gcloud to PATH from common installation locations
-    if [ -f "/home/dimi/Documents/google-cloud-sdk/bin/gcloud" ]; then
-        export PATH="$PATH:/home/dimi/Documents/google-cloud-sdk/bin"
-        echo -e "${YELLOW}✅ Added gcloud to PATH from local installation${NC}"
-    else
-        echo -e "${RED}❌ Error: gcloud CLI is not installed${NC}"
-        echo -e "${YELLOW}💡 Install it with: curl https://sdk.cloud.google.com | bash${NC}"
-        exit 1
-    fi
+    echo -e "${RED}❌ Error: gcloud CLI is not installed${NC}"
+    exit 1
 fi
 
 # Check if yarn is installed
@@ -39,6 +32,9 @@ fi
 
 echo -e "${YELLOW}📦 Installing dependencies...${NC}"
 yarn install
+
+echo -e "${YELLOW}🧹 Cleaning previous build artifacts...${NC}"
+rm -rf .next out 2>/dev/null || true
 
 echo -e "${YELLOW}🏗️  Building Next.js application for Cloudflare...${NC}"
 yarn build
@@ -51,6 +47,18 @@ fi
 
 echo -e "${GREEN}✅ Build completed successfully${NC}"
 
+echo -e "${YELLOW}🧹 Cleaning up unnecessary files for Cloudflare...${NC}"
+# Remove unnecessary files that Cloudflare doesn't need
+cd out
+find . -name "*.map" -type f -delete 2>/dev/null || true
+find . -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true
+find . -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
+find . -name ".DS_Store" -type f -delete 2>/dev/null || true
+find . -name "Thumbs.db" -type f -delete 2>/dev/null || true
+# Remove any server-side specific files
+find . -name "*.server.*" -type f -delete 2>/dev/null || true
+cd ..
+
 echo -e "${YELLOW}☁️  Uploading to Google Cloud Storage bucket: gs://${BUCKET_NAME}${NC}"
 
 # Clear existing files to avoid conflicts
@@ -61,7 +69,8 @@ gcloud storage rm -r "gs://${BUCKET_NAME}/**" 2>/dev/null || true
 cd out
 
 # Upload files with correct MIME types and preserve directory structure
-echo -e "${BLUE}📁 Uploading all files and directories...${NC}"
+echo -e "${BLUE}📁 Uploading optimized files for Cloudflare...${NC}"
+# Since cleanup already removed unwanted files, just upload everything
 gcloud storage cp -r . "gs://${BUCKET_NAME}/"
 
 # Set proper cache control headers for Cloudflare

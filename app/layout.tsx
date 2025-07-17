@@ -4,7 +4,6 @@ import './styles/globals.css';
 import Link from 'next/link';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { ThemeSwitch } from '@/components/ThemeSwitch';
-import { PinkThemeButton } from '@/components/PinkThemeButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -38,7 +37,7 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="system"
           enableSystem
-          themes={['light', 'dark', 'pink']}
+          themes={['light', 'dark']}
         >
           <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[624px] w-full">
             <nav className="lg:mb-16 mb-12 py-5">
@@ -54,7 +53,7 @@ export default function RootLayout({
                 <div className="flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
                   <Link
                     href="/cv"
-                    className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-blue-400 ring-2 ring-blue-300 dark:ring-blue-500"
+                    className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:scale-105 border-2 border-neutral-600"
                   >
                     📄 CV
                   </Link>
@@ -72,7 +71,6 @@ export default function RootLayout({
                   </Link>
                   <div className="flex items-center gap-2">
                     <ThemeSwitch />
-                    <PinkThemeButton />
                   </div>
                 </div>
               </div>

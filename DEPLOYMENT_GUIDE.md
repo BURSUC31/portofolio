@@ -196,7 +196,7 @@ This script:
 - ✅ Custom domain with HTTPS
 - ✅ Clean URLs (no trailing slashes)
 - ✅ Custom favicon from profile picture
-- ✅ Multiple theme support (light/dark/pink)
+- ✅ Multiple theme support (light/dark)
 - ✅ Responsive design
 - ✅ Fast global CDN delivery
 - ✅ Automatic deployment pipeline

@@ -27,7 +27,7 @@ export const ThemeSwitch: React.FC = () => {
   }, []);
 
   const toggleTheme = () => {
-    // Only toggle between light and dark, pink is handled separately
+    // Toggle between light and dark
     if (theme === 'dark') {
       setTheme('light');
     } else {
@@ -55,8 +55,6 @@ export const ThemeSwitch: React.FC = () => {
         className={`h-[14px] w-[14px] ${
           theme === 'dark'
             ? 'text-[#a8b3cf]'
-            : theme === 'pink'
-            ? 'text-[#7c2d12]'
             : 'text-[#1c1c1c]'
         }`}
       />

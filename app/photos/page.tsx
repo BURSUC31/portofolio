@@ -7,89 +7,89 @@ export const metadata = {
 
 const photosCloud = [
   {
-    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
+    src: '/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
+    src: '/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
+    src: '/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
+    src: '/photo4.jpg',
     alt: 'photo4',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo5.jpg',
+    src: '/photo5.jpg',
     alt: 'photo5',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo6.jpg',
+    src: '/photo6.jpg',
     alt: 'photo6',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo7.jpg',
+    src: '/photo7.jpg',
     alt: 'photo7',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo8.jpg',
+    src: '/photo8.jpg',
     alt: 'photo8',
   },
 ];
 
 const photosLocal1 = [
   {
-    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
+    src: '/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
+    src: '/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
+    src: '/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
+    src: '/photo4.jpg',
     alt: 'photo4',
   },
 ];
 
 const photosLocal2 = [
   {
-    src: 'https://tomuleseidimitrie.dev/photo1.jpg',
+    src: '/photo1.jpg',
     alt: 'photo1',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo2.jpg',
+    src: '/photo2.jpg',
     alt: 'photo2',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo3.jpg',
+    src: '/photo3.jpg',
     alt: 'photo3',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo4.jpg',
+    src: '/photo4.jpg',
     alt: 'photo4',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo5.jpg',
+    src: '/photo5.jpg',
     alt: 'photo5',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo6.jpg',
+    src: '/photo6.jpg',
     alt: 'photo6',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo7.jpg',
+    src: '/photo7.jpg',
     alt: 'photo7',
   },
   {
-    src: 'https://tomuleseidimitrie.dev/photo8.jpg',
+    src: '/photo8.jpg',
     alt: 'photo8',
   },
 ];

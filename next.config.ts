@@ -1,33 +1,8 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-
 const nextConfig: NextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: undefined,
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'tomuleseidimitrie.dev',
-        port: '',
-        pathname: '/photo*.jpg',
-      },
-      {
-        protocol: 'https',
-        hostname: 'tomuleseidimitrie.dev',
-        port: '',
-        pathname: '/profile.png',
-      },
-      {
-        protocol: 'https',
-        hostname: 'tomuleseidimitrie.dev',
-        port: '',
-        pathname: '/_next/**',
-      },
-    ],
+    // Use default config: images from /public with relative paths
   },
   reactStrictMode: true,
 };

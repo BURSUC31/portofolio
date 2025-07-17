@@ -5,8 +5,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/dimitrie-portfolio-website-eu' : undefined,
-  assetPrefix: isProd ? 'https://storage.googleapis.com/dimitrie-portfolio-website-eu' : undefined,
+  basePath: undefined,
+  assetPrefix: isProd ? 'https://tomuleseidimitrie.dev' : undefined,
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'storage.googleapis.com',
         port: '',
-        pathname: isProd ? '/dimitrie-portfolio-website-eu/**' : '/**',
+        pathname: isProd ? '/**' : '/**',
       },
     ],
   },

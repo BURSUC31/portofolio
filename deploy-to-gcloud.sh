@@ -67,9 +67,7 @@ cd ..
 echo -e "${YELLOW}🌐 Configuring bucket for static website hosting...${NC}"
 
 # Configure bucket for static website hosting
-gcloud storage buckets update "gs://${BUCKET_NAME}" \
-    --web-main-page-suffix=index.html \
-    --web-error-page=404.html
+gsutil web set -m index.html -e 404.html "gs://${BUCKET_NAME}"
 
 echo -e "${YELLOW}🔓 Making bucket publicly accessible...${NC}"
 
@@ -80,11 +78,12 @@ gcloud storage buckets add-iam-policy-binding "gs://${BUCKET_NAME}" \
 
 echo -e "${GREEN}🎉 Deployment completed successfully!${NC}"
 echo -e "${BLUE}🌍 Your website is live at:${NC}"
+echo -e "${GREEN}https://tomuleseidimitrie.dev${NC}"
+echo -e "${BLUE}🌍 Alternative URLs:${NC}"
+echo -e "${GREEN}http://tomuleseidimitrie.dev${NC}"
 echo -e "${GREEN}https://storage.googleapis.com/${BUCKET_NAME}/index.html${NC}"
-echo -e "${BLUE}🌍 Alternative URL (may work better):${NC}"
-echo -e "${GREEN}http://${BUCKET_NAME}.storage.googleapis.com${NC}"
 
-echo -e "${YELLOW}📝 Note: If you see asset loading errors, try the alternative URL above${NC}"
+echo -e "${YELLOW}📝 Note: HTTPS may take 10-60 minutes to work while SSL certificate provisions${NC}"
 
 # Optional: Commit and push changes to GitHub
 read -p "Do you want to commit and push changes to GitHub? (y/n): " -n 1 -r

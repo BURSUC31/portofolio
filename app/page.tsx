@@ -6,21 +6,23 @@ export default function Home() {
   return (
     <section>
       <div className="mb-8">
-        <a
-          href="https://github.com/BURSUC31"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group float-right ml-6 mb-6"
-        >
-          <Image
-            alt="Profile photo of Dimitrie Tomulesei"
-            width={180}
-            height={180}
-            className="rounded-full bg-white dark:bg-neutral-100 p-1 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border-2 border-white dark:border-neutral-200 hover:border-neutral-100 dark:hover:border-neutral-300 ring-4 ring-neutral-200 dark:ring-neutral-700 hover:ring-neutral-300 dark:hover:ring-neutral-600 aspect-square object-cover"
-            src="/profile.png"
-            priority
-          />
-        </a>
+        <div className="flex justify-center sm:justify-end">
+          <a
+            href="https://github.com/BURSUC31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group ml-6 mb-6"
+          >
+            <Image
+              alt="Profile photo of Dimitrie Tomulesei"
+              width={180}
+              height={180}
+              className="rounded-full bg-white dark:bg-neutral-100 p-1 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 border-2 border-white dark:border-neutral-200 hover:border-neutral-100 dark:hover:border-neutral-300 ring-4 ring-neutral-200 dark:ring-neutral-700 hover:ring-neutral-300 dark:hover:ring-neutral-600 aspect-square object-cover"
+              src="/profile.png"
+              priority
+            />
+          </a>
+        </div>
       </div>
       <h1 className="mb-4 text-3xl font-bold">Dimitrie Tomulesei</h1>
       <p className="mb-8 text-xl text-neutral-700 dark:text-neutral-300">
